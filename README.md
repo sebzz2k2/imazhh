@@ -10,11 +10,12 @@
 ### <div  style="color:hsl(235, 19%, 35%)"> Packages used
 
 1. React-icons - https://react-icons.github.io/react-icons/
-2.
+2. Axios - https://axios-http.com/
+3.
 
 ### <div  style="color:hsl(235, 19%, 35%)"> API
 
-- Pexels - https://www.pexels.com/api/
+- Pexels - https://rapidapi.com/pexels-pexels-default/api/Pexels/
 
 ### <div  style="color:hsl(235, 19%, 35%)"> Features
 
