@@ -20,7 +20,7 @@ function Navbar() {
           onClick={toggleTheme}
           className="text-Very-Dark-Grayish-Blue dark:text-Light-Grayish-Blue text-xl md:text-2xl lg:text-3xl hover:animate-spin"
         >
-          {dark ? <FaSun /> : <FaMoon />}
+          {dark ? <FaMoon /> : <FaSun />}
         </button>
       </div>
     </nav>

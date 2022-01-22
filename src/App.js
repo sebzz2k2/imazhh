@@ -3,9 +3,11 @@ import axios from "axios";
 
 import Navbar from "./Components/Navbar";
 import Search from "./Components/Search";
+import ViewImage from "./Components/ViewImage";
 
 function App() {
   const [search, setSearch] = useState("");
+  const [searchImage, setSearchImage] = useState([]);
 
   const handleSearch = (evt) => {
     evt.preventDefault();
@@ -25,12 +27,13 @@ function App() {
     axios
       .request(options)
       .then((response) => {
-        console.log(response.data.photos);
+        setSearchImage(response.data.photos);
       })
       .catch((error) => {
         console.error(error);
       });
   };
+
   return (
     <div className="App bg-Very-Light-Gray dark:bg-Very-Dark-Blue min-h-screen">
       <Navbar />
@@ -39,6 +42,12 @@ function App() {
         search={search}
         setSearch={setSearch}
       />
+
+      <div className="px-4 lg:px-16 md:px-12 py-5 md:columns-3 lg:columns-4">
+        {searchImage.map((photo) => (
+          <ViewImage value={photo} key={photo.id} />
+        ))}
+      </div>
     </div>
   );
 }
