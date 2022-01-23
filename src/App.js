@@ -66,21 +66,24 @@ function App() {
   return (
     <div className="App bg-Very-Light-Gray dark:bg-Very-Dark-Blue min-h-screen">
       <Navbar />
-      <Search
-        handleSearch={handleSearch}
-        search={search}
-        setSearch={setSearch}
-      />
+
       {!imageClicked ? (
-        <div className="px-4 lg:px-16 md:px-12 py-5 md:columns-3 lg:columns-4">
-          {searchImage.map((photo) => (
-            <ViewImage
-              value={photo}
-              key={photo.id}
-              handleClickView={handleClickView}
-            />
-          ))}
-        </div>
+        <>
+          <Search
+            handleSearch={handleSearch}
+            search={search}
+            setSearch={setSearch}
+          />
+          <div className="px-4 lg:px-16 md:px-12 py-5 md:columns-3 lg:columns-4">
+            {searchImage.map((photo) => (
+              <ViewImage
+                value={photo}
+                key={photo.id}
+                handleClickView={handleClickView}
+              />
+            ))}
+          </div>
+        </>
       ) : (
         <DisplayImage
           value={viewImage}
