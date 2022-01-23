@@ -3,7 +3,7 @@ import React from "react";
 function Search(props) {
   return (
     <form
-      className="px-4 lg:px-16 md:px-12 py-5 flex justify-center"
+      className="px-4 lg:px-16 md:px-12 py-5 flex justify-center "
       onSubmit={props.handleSearch}
     >
       <input

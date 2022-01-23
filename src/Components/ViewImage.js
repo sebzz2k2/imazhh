@@ -1,10 +1,17 @@
 import React from "react";
 
-function ViewImage({ value }) {
+function ViewImage(props) {
+  const handleClick = () => {
+    props.handleClickView(props.value.id);
+  };
   return (
-    <main className="pb-4 ">
-      <div className="">
-        <img src={value.src.original} alt={value.alt} className=" " />
+    <main className="pb-4 hover:scale-105">
+      <div>
+        <img
+          src={props.value.src.original}
+          alt={props.value.alt}
+          onClick={handleClick}
+        />
       </div>
     </main>
   );
