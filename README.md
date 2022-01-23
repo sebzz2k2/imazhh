@@ -11,7 +11,6 @@
 
 1. React-icons - https://react-icons.github.io/react-icons/
 2. Axios - https://axios-http.com/
-3.
 
 ### <div  style="color:hsl(235, 19%, 35%)"> API
 
@@ -20,3 +19,4 @@
 ### <div  style="color:hsl(235, 19%, 35%)"> Features
 
 1. Toggle Theme
+2. View Image fullscreen
